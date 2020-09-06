@@ -1,0 +1,69 @@
+p {
+  color: #08664f !important;
+}
+
+body {
+  background-color: 0;
+  direction: rtl;
+}
+
+.nav {
+  background-color: #4d00b3;
+  font-size: 20px;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+
+.banner h1, .banner .footer h3, .footer .banner h3 {
+  text-align: center;
+  color: #810e72;
+  font-size: 30px;
+}
+
+.banner h1:hover, .banner .footer h3:hover, .footer .banner h3:hover {
+  transition: color 2s, background-color 2s;
+  -webkit-transition: color 2s, background-color 2s;
+  -o-transition: color 2s, background-color 2s;
+  -moz-transition: color 2s, background-color 2s;
+}
+
+.footer h3 {
+  text-align: center;
+  color: #810e72;
+  font-size: 15px;
+}
+
+.footer h3:hover {
+  background-color: blue;
+  color: red;
+  transition: color 2s, background-color 2s;
+  -webkit-transition: color 2s, background-color 2s;
+  -o-transition: color 2s, background-color 2s;
+  -moz-transition: color 2s, background-color 2s;
+}
+
+h1, .footer h3 {
+  text-align: center;
+  color: #da0f7e;
+  font-size: 20px;
+}
+
+h1:hover, .footer h3:hover {
+  background-color: green;
+}
+
+.banner p {
+  font-size: 20px;
+}

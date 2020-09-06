@@ -1,0 +1,51 @@
+
+$color:(
+ 
+    1:pink ,
+    2:purple ,
+    3:orange ,
+    4:green ,
+) ;
+
+
+p{
+    font-size:20px ;
+    padding: 10px;
+}
+
+
+// @for $i from 1 to 5 {
+  // این تا یکی مونده به آخره عدد 5 شمارش میکنه
+//     .p-#{$i}{
+//         background-color: map-get($map: $color, $key:$i );
+//     }
+   
+    
+// }
+@for $i from 1 through 6 {
+  //اما این تا خود عدد 4 شمارش میکنه
+    .p-#{$i}{
+        background-color: map-get($map: $color, $key:$i );
+    }
+   
+    
+}
+
+
+// ----------------------each & dastor sharti if dar sass------------------
+
+$eachcolor: navy yellow black pink  ;
+
+@each $color in $eachcolor {
+    
+.p-#{$color}{
+    background-color: $color  ;
+    @if($color== pink){
+        background-color: purple;
+    }
+    @else {
+        background-color: $color;
+    }
+}
+
+}

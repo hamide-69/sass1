@@ -1,0 +1,104 @@
+@import "test" ;
+
+
+$color-first:red;
+$color-second:blue ;
+$color-third:green;
+$color-fourth:#fff;
+
+$font-lg:30px;
+$font-md:20px;
+$font-sm:15px;
+
+
+ @mixin title-style($font-size:$font-md){
+     $color-test:rgb(129, 14, 114) !global;
+     text-align:center;
+   color:$color-test;
+     font-size: $font-size;
+ }
+
+ @mixin  transition($params...) {
+    transition: $params;    
+   -webkit-transition: $params;   
+   -o-transition: $params;   
+   -moz-transition: $params;   
+ }
+
+@function doubelfonts($fontsize){
+
+    @return $fontsize * 2 ;
+}
+
+body{
+    background-color: red($color: #000000);
+    direction: rtl;
+}
+.nav{
+    //background-color: $color-first;
+   // background-color: lighten($color: #7e0c45, $amount: 10);
+  // background-color:darken($color:$color-first, $amount:70);
+ // background-color: transparentize($color: $color-first, $amount: 0.4);  
+background-color: mix($color-first,  $color-second,30%);
+
+    font-size: $font-md;
+
+    ul li {
+        list-style: none;
+    }
+
+    a{
+        color: $color-fourth;
+        font-size: $font-sm;
+        text-decoration: none;
+        &:hover{
+            color:#ccc 
+        }
+    }
+}
+
+
+.banner h1{
+    @include title-style($font-lg);    
+
+    &:hover{
+        @include transition(color 2s , background-color 2s) ;
+    }
+}
+
+ .footer h3{
+     @include title-style($font-sm);   
+
+     &:hover{
+        background-color:$color-second;
+       color:$color-first;
+
+         @include transition(color 2s , background-color 2s) ;
+     }
+  
+ }
+
+
+%title-style2{
+    $color-test:rgb(218, 15, 126) !global;
+       text-align:center;
+        color:$color-test;
+        font-size:  $font-md;
+}
+
+
+ h1{
+    @extend %title-style2 ;
+    &:hover{
+        background-color: $color-third;
+    }
+}
+
+.footer h3{
+    @extend  h1 ;
+  
+}
+.banner p {
+   
+    font-size: doubelfonts(10px);
+}

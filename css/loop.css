@@ -1,0 +1,40 @@
+p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.p-1 {
+  background-color: pink;
+}
+
+.p-2 {
+  background-color: purple;
+}
+
+.p-3 {
+  background-color: orange;
+}
+
+.p-4 {
+  background-color: green;
+}
+
+.p-navy {
+  background-color: navy;
+  background-color: navy;
+}
+
+.p-yellow {
+  background-color: yellow;
+  background-color: yellow;
+}
+
+.p-black {
+  background-color: black;
+  background-color: black;
+}
+
+.p-pink {
+  background-color: pink;
+  background-color: purple;
+}

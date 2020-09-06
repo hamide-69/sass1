@@ -1,0 +1,40 @@
+.numbers {
+    font-weight: 400; // integer
+    line-height: 1.6; // decimal
+    font-size: 20px; // rem , em , %
+  }
+  
+  .string {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .colors {
+    color: red;
+    background: #ffff33;
+    border: rgb(255, 0, 5);
+    background-color: rgba(255, 0, 5, 0.5);
+    outline-color: hsl(150, 100%, 50%);
+  }
+  
+  .list {
+    margin: 10px 20px 30px 40px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    border: 2px solid red;
+  }
+  
+  $colors: (
+    primary: red,
+    secondary: green,
+    tertiary: rgb(158, 15, 103)
+  );
+  
+  h1 {
+      color: map-get($map: $colors, $key: secondary);
+  }
+  
+  
+  // boolean : true or false
+  
+  // null : has no value
